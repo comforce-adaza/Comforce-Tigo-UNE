@@ -18,7 +18,7 @@ class ComposerStaticInitd4af22b4621be0141e2974b654a34b44
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
         '32dcc8afd4335739640db7d200c1971d' => __DIR__ . '/..' . '/symfony/polyfill-apcu/bootstrap.php',
-        '719971e375036615a0685b6fb054583d' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php',
+        '645203e79e27e1528e5ba7822043bdb5' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -65,10 +65,6 @@ class ComposerStaticInitd4af22b4621be0141e2974b654a34b44
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Bundle\\DoctrineCacheBundle\\' => 36,
             'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
-        ),
-        'A' => 
-        array (
-            'AppBundle\\' => 10,
         ),
     );
 
@@ -177,10 +173,10 @@ class ComposerStaticInitd4af22b4621be0141e2974b654a34b44
         array (
             0 => __DIR__ . '/..' . '/doctrine/doctrine-bundle',
         ),
-        'AppBundle\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/AppBundle',
-        ),
+    );
+
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/../..' . '/src',
     );
 
     public static $prefixesPsr0 = array (
@@ -259,6 +255,7 @@ class ComposerStaticInitd4af22b4621be0141e2974b654a34b44
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitd4af22b4621be0141e2974b654a34b44::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitd4af22b4621be0141e2974b654a34b44::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitd4af22b4621be0141e2974b654a34b44::$fallbackDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInitd4af22b4621be0141e2974b654a34b44::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitd4af22b4621be0141e2974b654a34b44::$classMap;
 
